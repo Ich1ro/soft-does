@@ -1,0 +1,14 @@
+@mixin button {
+  font-family: var(--font-jetbrains-mono, monospace);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px 30px;
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  height: fit-content;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}

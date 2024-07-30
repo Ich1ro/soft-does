@@ -1,0 +1,106 @@
+.main {
+  width: 100%;
+  padding: 100px 5%;
+  background: linear-gradient(135deg, black 85%, #E2FF66 100%);
+
+
+  &_content {
+    width: 100%;
+
+    &_top {
+      display: flex;
+      margin-bottom: 75px;
+
+      &_left,
+      &_right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      &_right {
+        // justify-content: flex-end;
+        &_info {
+          padding: 20px 0;
+          width: 65%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border-radius: 18px;
+          background-color: white;
+          border: 1px solid black;
+          color: black;
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - 60px),
+            calc(100% - 60px) 100%,
+            0 100%
+          );
+          text-align: center;
+
+          &:nth-child(2) {
+            margin-top: -10px;
+            margin-left: -50px;
+          }
+
+          &:last-child {
+            background-color: #cfec57;
+            margin-top: -10px;
+          }
+
+          & h3 {
+            //   display: flex;
+            font-weight: 100;
+            font-size: 4rem;
+
+            &::before,
+            &::after {
+              content: '>';
+              font-size: 4rem;
+            }
+
+            &::before {
+              margin-right: 1rem;
+            }
+
+            &::after {
+              content: '<';
+              margin-left: 1rem;
+            }
+          }
+
+          & p {
+            width: 70%;
+            font-size: 15px;
+          }
+        }
+      }
+
+      &_left {
+        & h2 {
+          font-size: 80px;
+          text-transform: uppercase;
+          font-weight: 100;
+          margin-bottom: 20px;
+          width: 65%;
+        }
+
+        & p {
+          max-width: 65%;
+          font-size: 15px;
+        }
+      }
+    }
+
+    &_awards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+    }
+  }
+}
