@@ -1,8 +1,11 @@
 .main {
   width: 100%;
   padding: 100px 5%;
-  background: linear-gradient(135deg, black 85%, #E2FF66 100%);
+  background: linear-gradient(135deg, black 85%, #e2ff66 100%);
 
+  @media (max-width: 800px) {
+    padding: 50px 5%;
+  }
 
   &_content {
     width: 100%;
@@ -11,6 +14,10 @@
       display: flex;
       margin-bottom: 75px;
 
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+
       &_left,
       &_right {
         width: 50%;
@@ -18,10 +25,16 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media (max-width: 800px) {
+          width: 100%;
+          text-align: center;
+        }
       }
 
       &_right {
         // justify-content: flex-end;
+        
         &_info {
           padding: 20px 0;
           width: 65%;
@@ -42,14 +55,29 @@
           );
           text-align: center;
 
+          @media (max-width: 450px) {
+            width: 90%;
+            clip-path: none;
+            margin-bottom: 10px;
+          }
+
           &:nth-child(2) {
             margin-top: -10px;
             margin-left: -50px;
+
+            @media (max-width: 450px) {
+              margin-top: 0;
+              margin-left: 0;
+            }
           }
 
           &:last-child {
             background-color: #cfec57;
             margin-top: -10px;
+
+            @media (max-width: 450px) {
+              margin-top: 0;
+            }
           }
 
           & h3 {
@@ -57,10 +85,18 @@
             font-weight: 100;
             font-size: 4rem;
 
+            @media (max-width: 450px) {
+              font-size: 2rem;
+            }
+
             &::before,
             &::after {
               content: '>';
               font-size: 4rem;
+
+              @media (max-width: 450px) {
+                font-size: 2rem;
+              }
             }
 
             &::before {
@@ -76,22 +112,51 @@
           & p {
             width: 70%;
             font-size: 15px;
+
+            @media (max-width: 450px) {
+              font-size: 13px;
+            }
           }
         }
       }
 
       &_left {
-        & h2 {
-          font-size: 80px;
-          text-transform: uppercase;
-          font-weight: 100;
-          margin-bottom: 20px;
-          width: 65%;
-        }
+        &_div {
+          width: 100%;
+          padding-left: 50px;
 
-        & p {
-          max-width: 65%;
-          font-size: 15px;
+          @media (max-width: 800px) {
+            padding-left: 0;
+          }
+
+          & h2 {
+            font-size: 80px;
+            text-transform: uppercase;
+            font-weight: 100;
+            margin-bottom: 20px;
+            width: 75%;
+
+            @media (max-width: 800px) {
+              width: 100%;
+              text-align: center;
+            }
+
+            @media (max-width: 450px) {
+              font-size: 60px;
+            }
+          }
+
+          & p {
+            max-width: 75%;
+            font-size: 15px;
+
+            @media (max-width: 800px) {
+              width: 100%;
+              max-width: 100%;
+              text-align: center;
+              margin-bottom: 50px;
+            }
+          }
         }
       }
     }
@@ -101,6 +166,23 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 100px;
+
+      @media (max-width: 800px) {
+        padding: 0;
+      }
+
+      & div {
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & img {
+        @media (max-width: 800px) {
+          width: 65%;
+        }
+      }
     }
   }
 }

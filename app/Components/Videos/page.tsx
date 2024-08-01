@@ -80,7 +80,7 @@ export default function Videos() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='videos'>
       <h2>VIDEO TESTIMONIALS</h2>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (

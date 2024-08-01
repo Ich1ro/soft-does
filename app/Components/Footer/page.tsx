@@ -1,9 +1,18 @@
-import Image from 'next/image';
+'use client'
 import styles from './Footer.module.scss';
 
 export default function Footer() {
+
+  const scrollToContacts = () => {
+    const element = document.getElementById('contacts');
+    
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className={styles.footer} id="header">
+    <div className={styles.footer} id="insights">
       <div className={styles.footer_line}>
         <div className={styles.footer_line_column}>
           <h4>Services</h4>
@@ -77,8 +86,11 @@ export default function Footer() {
         <div className={styles.footer_line_column}>
           <h2>Soft Does</h2>
           <div className={styles.footer_line_column_images}></div>
-          <button>Contact us</button>
-          <p>©Copyright 2024 Yalantis - Software engineering and IT consulting company. All rights reserved</p>
+          <button onClick={scrollToContacts}>Contact us</button>
+          <p>
+            ©Copyright 2024 Yalantis - Software engineering and IT consulting
+            company. All rights reserved
+          </p>
         </div>
         <div className={styles.footer_line_column}>
           <a>Cookies notice</a>

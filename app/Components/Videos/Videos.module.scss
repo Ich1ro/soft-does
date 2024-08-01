@@ -2,21 +2,25 @@
   padding: 50px;
   background-color: #000;
   color: #fff;
-//   text-align: center;
+  //   text-align: center;
 
   h2 {
     font-size: 36px;
     margin-bottom: 30px;
-	font-weight: 200;
+    font-weight: 200;
+
+    @media (max-width: 350px) {
+      font-size: 25px;
+    }
   }
 }
 
 .testimonial {
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-//   background-color: #111;
-//   border-radius: 10px;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  //   background-color: #111;
+  //   border-radius: 10px;
+  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .video {
     width: 100%;
@@ -27,19 +31,31 @@
   p {
     font-size: 14px;
     margin-bottom: 10px;
-	opacity: .5;
+    opacity: 0.5;
+
+    @media (max-width: 350px) {
+      font-size: 13px;
+    }
   }
 
   h4 {
     font-size: 16px;
     margin-bottom: 5px;
-	font-weight: 200;
+    font-weight: 200;
+
+    @media (max-width: 350px) {
+      font-size: 14px;
+    }
   }
 
   h5 {
     font-size: 14px;
-    opacity: .5;
-	font-weight: 200;
+    opacity: 0.5;
+    font-weight: 200;
+
+    @media (max-width: 350px) {
+      font-size: 13px;
+    }
   }
 }
 

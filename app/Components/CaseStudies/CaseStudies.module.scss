@@ -1,47 +1,110 @@
 .main {
-	padding: 80px 5%;
-	background-color: white;
-	color: black;
+  padding: 80px 5%;
+  background-color: white;
+  color: black;
 
-	& h1 {
-		margin-bottom: 80px;
-		font-weight: 300;
-		font-size: 70px;
-		text-transform: uppercase;
-	}
+  & h1 {
+    margin-bottom: 80px;
+    font-weight: 300;
+    font-size: 70px;
+    text-transform: uppercase;
 
-	&_block {
-		display: flex;
-		align-items: flex-end;
-		margin-bottom: 65px;
+    @media (max-width: 450px) {
+      text-align: center;
+      font-size: 50px;
+    }
 
-		& img {
-			margin-right: 20px;
-			width: 60%;
-			height: 60%;
-		}
+    @media (max-width: 380px) {
+      font-size: 40px;
+    }
+  }
 
-		&_content {
-			& p {
-				font-size: 12px;
-				margin-bottom: 10px;
-			}
+  &_block {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 65px;
 
-			& h4 {
-				font-size: 25px;
-				font-weight: 200;
-				text-transform: uppercase;
-			}
-		}
-		
-		&_right {
-			justify-content: flex-end;
-			align-items: flex-end;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      text-align: center;
+    }
 
-			& img {
-				margin-right: 0;
-				margin-left: 20px;
-			}
-		}
-	}
+    &:nth-child(3) {
+      @media (max-width: 450px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &_image {
+      width: 60%;
+      height: 100%;
+	    margin-right: 20px;
+
+      @media (max-width: 450px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      & img {
+        width: 100%;
+        height: 60%;
+      }
+    }
+
+    &_content {
+      & p {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      & h4 {
+        font-size: 25px;
+        font-weight: 200;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &_right {
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: end;
+
+      & img {
+        margin-right: 0;
+        margin-left: 20px;
+
+        @media (max-width: 450px) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &_link {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+    justify-content: center;
+
+    & a {
+      font-size: 20px;
+      margin-right: 15px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    & img {
+      width: 30px;
+    }
+  }
 }
