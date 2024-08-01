@@ -1,12 +1,12 @@
 'use client';
 import styles from './Main.module.scss';
-// import Spline from '@splinetool/react-spline/next';
-import dynamic from 'next/dynamic';
+import Spline from '@splinetool/react-spline/next';
+// import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react';
 
-const Spline = dynamic(() => import('@splinetool/react-spline/next'), {
-  loading: () => <p></p>,
-});
+// const Spline = dynamic(() => import('@splinetool/react-spline/next'), {
+//   loading: () => <p></p>,
+// });
 
 export default function Main() {
   const [isLoading, setIsLoading] = useState(true);
