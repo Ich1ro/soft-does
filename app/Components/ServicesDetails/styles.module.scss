@@ -1,0 +1,251 @@
+@import '../../mixins.scss';
+
+.main {
+  padding: 100px 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .details_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .details_first,
+    .details_second,
+    .details_third,
+    .details_fourth {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      max-width: calc(50% - 5px);
+
+      .left {
+        max-width: 60%;
+
+        p {
+          font-size: 14px;
+          margin-bottom: 20px;
+          max-width: 80%;
+          font-weight: 200;
+        }
+
+        h2 {
+          font-weight: 100;
+          font-size: 1.5rem;
+          // width: 70%;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+
+          @media (max-width: 800px) {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 0 20px;
+          }
+
+          @media (max-width: 450px) {
+            font-size: 2rem;
+          }
+
+          &::before,
+          &::after {
+            content: '>';
+            font-size: 1.5rem;
+
+            @media (max-width: 800px) {
+              font-size: 2.5rem;
+            }
+
+            @media (max-width: 450px) {
+              font-size: 2rem;
+            }
+          }
+
+          &::before {
+            margin-right: 0.5rem;
+          }
+
+          &::after {
+            content: '<';
+            margin-left: 0.5rem;
+          }
+        }
+
+        .button {
+          @include button;
+          padding: 1px;
+          background-color: rgb(255, 255, 255, 0.5);
+          border: none;
+          // box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 1);
+
+          .inside {
+            @include button;
+            //   background-color: #0c1017;
+            font-size: 15px;
+            font-weight: 100;
+            border: none;
+            padding: 15px 25px;
+          }
+        }
+      }
+
+      .right {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .service_image {
+          width: 85%;
+          height: auto;
+        }
+      }
+    }
+
+    .details_first {
+		margin-right: 5px;
+		margin-bottom: 5px;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.04)
+        ),
+        conic-gradient(
+          from -60.23deg at 75% 50%,
+          rgba(20, 63, 173, 0.1) -79.72deg,
+          rgba(22, 29, 37, 0.2) 43.82deg,
+          #143fad 280.19deg,
+          #161d25 280.21deg,
+          rgba(20, 63, 173, 0.5) 280.23deg,
+          #161d25 280.26deg,
+          rgba(20, 63, 173, 0.1) 280.28deg,
+          rgba(22, 29, 37, 0.2) 403.82deg
+        );
+
+      h2 {
+        &::before,
+        &::after {
+          color: #2751b3;
+        }
+      }
+
+      .left {
+        .button {
+          .inside {
+            background-color: #0c1017 !important;
+          }
+        }
+      }
+    }
+
+    .details_second {
+		margin-left: 5px;
+		margin-bottom: 5px;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.04)
+        ),
+        conic-gradient(
+          from -54.83deg at 75% 50%,
+          rgba(30, 189, 144, 0.1) -79.72deg,
+          rgba(22, 29, 37, 0.2) 43.82deg,
+          #e85a95 280.19deg,
+          #161d25 280.21deg,
+          rgba(232, 90, 149, 0.5) 280.23deg,
+          #161d25 280.26deg,
+          rgba(30, 189, 144, 0.1) 280.28deg,
+          rgba(22, 29, 37, 0.2) 403.82deg
+        );
+
+      h2 {
+        &::before,
+        &::after {
+          color: #e85a95;
+        }
+      }
+
+      .left {
+        .button {
+          .inside {
+            background-color: #0e1816 !important;
+          }
+        }
+      }
+    }
+
+    .details_third {
+		margin-right: 5px;
+		margin-top: 5px;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.04)
+        ),
+        conic-gradient(
+          from -60.39deg at 75% 50%,
+          rgba(252, 105, 211, 0.1) -79.72deg,
+          rgba(22, 29, 37, 0.2) 43.82deg,
+          rgba(242, 143, 198, 0.615686) 280.19deg,
+          #161d25 280.21deg,
+          #fc69d380 280.23deg,
+          #161d25 280.26deg,
+          rgba(252, 105, 211, 0.1) 280.28deg,
+          rgba(22, 29, 37, 0.2) 403.82deg
+        );
+
+      h2 {
+        &::before,
+        &::after {
+          color: #fc69d380;
+        }
+      }
+
+      .left {
+        .button {
+          .inside {
+            background-color: #1e141b !important;
+          }
+        }
+      }
+    }
+
+    .details_fourth {
+		margin-left: 5px;
+		margin-top: 5px;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.04)
+        ),
+        conic-gradient(
+          from -56.04deg at 75% 50%,
+          rgba(128, 0, 255, 0.1) -79.72deg,
+          rgba(22, 29, 37, 0.2) 43.82deg,
+          #8000ff 280.19deg,
+          #161d25 280.21deg,
+          rgba(128, 0, 255, 0.5) 280.23deg,
+          #161d25 280.26deg,
+          rgba(128, 0, 255, 0.1) 280.28deg,
+          rgba(22, 29, 37, 0.2) 403.82deg
+        );
+
+      h2 {
+        &::before,
+        &::after {
+          color: #8000ff;
+        }
+      }
+
+      .left {
+        .button {
+          .inside {
+            background-color: #150b1f !important;
+          }
+        }
+      }
+    }
+  }
+}

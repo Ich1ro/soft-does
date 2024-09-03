@@ -1,12 +1,11 @@
-'use client'
-import Image from "next/image";
-import styles from "./Videos.module.scss";
+'use client';
+import React from 'react';
+import styles from './styles.module.scss';
 import Slider from 'react-slick';
+import Image from 'next/image';
+import { portfolio } from '@/app/lib/data';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
-import { testimonials } from '@/app/lib/data'
-
-
 
 const NextArrow = (props: any) => {
   const { className, style, onClick } = props;
@@ -34,7 +33,7 @@ const PrevArrow = (props: any) => {
   );
 };
 
-export default function Videos() {
+export default function Portfolio() {
   const settings = {
     dots: true,
     infinite: true,
@@ -62,21 +61,23 @@ export default function Videos() {
   };
 
   return (
-    <div className={styles.container} id='videos'>
-      <h2>VIDEO TESTIMONIALS</h2>
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className={styles.testimonial}>
-            <video controls className={styles.video}>
-              <source src={testimonial.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p>{testimonial.text}</p>
-            <h4>{testimonial.name}</h4>
-            <h5>{testimonial.position}</h5>
-          </div>
-        ))}
-      </Slider>
+    <div className={styles.main}>
+      <div className={styles.container} id="videos">
+        <h2>Portfolio</h2>
+        <Slider {...settings}>
+          {portfolio.map((item, index) => (
+            <div key={index} className={styles.testimonial}>
+              <Image alt="" className={styles.image} src=""></Image>
+              <h4>{item.name}</h4>
+              <h5>{item.position}</h5>
+              <p>{item.text}</p>
+              <button className={styles.button}>
+                <div className={styles.inside}>Read more</div>
+              </button>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }

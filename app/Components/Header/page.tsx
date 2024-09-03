@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './Header.module.scss';
+import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,19 +20,19 @@ export default function Header() {
 
   return (
     <div className={styles.main} id="header">
-      <h3 className={styles.main_header}>
+      <Link href="/" className={styles.main_header}>
         {/* <h3 className={styles.main_header_left}>{'>'}</h3>
         <h3 className={styles.main_header_center}>Soft Does</h3>
         <h3 className={styles.main_header_right}>{'<'}</h3> */}
         SOFT DOES
-      </h3>
+      </Link>
       <div
         className={`${styles.main_nav} ${
           isMenuOpen ? styles.main_nav_open : ''
         }`}
       >
-        <a href="#services">Services</a>
-        <a href="#partners">Expertise</a>
+        <Link href="/services">Services</Link>
+        <Link href="/expertise">Expertise</Link>
         <a href="#insights">Industies</a>
         <a href="#videos">Success Stories</a>
         <a href="#insights">Solution Hub</a>
