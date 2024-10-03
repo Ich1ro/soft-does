@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Animation from '../Animations/Animations';
 import styles from './Faq.module.scss';
+import { ContactUsForm } from '../ContactUsForm/ContactUsForm';
 
 export default function Faq() {
   const [isOpen, setIsOpen] = useState(false);
@@ -446,7 +447,7 @@ export default function Faq() {
           </Animation>
         </div>
       </div>
-      
+      <ContactUsForm />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import MainExpertise from '../Components/MainExpertise/page';
 import Expertise from '../Components/Expertise/page';
 import ExpertTeam from '../Components/ExpertTeam/page';
 import Portfolio from '../Components/Portfolio/page';
-import Technology from '../Components/Technology/page';
+import Technology from '../Components/Technology/Technology';
 import Faq from '../Components/Faq/page';
 import Footer from '../Components/Footer/page';
 
