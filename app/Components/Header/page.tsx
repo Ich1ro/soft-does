@@ -37,7 +37,7 @@ export default function Header() {
         <a href="#videos">Success Stories</a>
         <a href="#insights">Solution Hub</a>
         <a href="#about">Company</a>
-        <a href="#insights">Insights</a>
+        <Link href="/insights">Insights</Link>
         <button onClick={scrollToContacts}>Contact us</button>
       </div>
       <div className={styles.main_button}>

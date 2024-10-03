@@ -1,3 +1,8 @@
+import laptopImage from '@/public/release/laptop.png';
+import robotImage from '@/public/release/robot.png';
+import coopWorkImage from '@/public/release/coopWork.png';
+import workTableImage from '@/public/release/workTable.png';
+
 export const testimonials = [
   {
     video: '',
@@ -38,4 +43,11 @@ export const portfolio = [
     name: 'JANE SMITH',
     position: 'CEO IN TECH',
   },
+];
+
+export const releaseImages1 = [
+  workTableImage,
+  coopWorkImage,
+  robotImage,
+  laptopImage,
 ];
