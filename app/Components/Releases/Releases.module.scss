@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     padding: 20px 5%;
   }
 
@@ -24,11 +24,10 @@
     }
 
     h1 {
-      font-size: 54px;
-      font-weight: 300;
+      @include text-style(300, 54px, #fff);
 
       @media (max-width: 800px) {
-        font-size: 40px;
+        @include text-style(300, 40px, #fff);
       }
     }
 
@@ -40,11 +39,10 @@
       border: none;
 
       .inside {
+        @include text-style(200, 18px, #fff);
         width: 148px;
         @include button;
         background-color: black;
-        font-size: 18px;
-        font-weight: 100;
         border: none;
         padding: 18px 20px;
         display: flex;
@@ -79,7 +77,7 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         padding: 10px;
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
           flex-direction: column;
         }
 
@@ -89,32 +87,28 @@
           flex-grow: 1;
           width: 45%;
 
-          @media (max-width: 500px) {
+          @media (max-width: 600px) {
             width: 100%;
             align-items: center;
           }
 
           h5 {
-            font-size: 15px;
+            @include text-style(200, 20px, #fff);
             margin-bottom: 5px;
-            font-weight: 200;
             text-transform: uppercase;
           }
 
           .subtitle {
             text-transform: uppercase;
+            @include text-style(200, 16px, rgba(255, 255, 255, 0.4));
             margin-bottom: 20px;
-            opacity: 0.5;
-            font-size: 15px;
             text-transform: uppercase;
-            margin-bottom: 20px;
-            opacity: 0.5;
           }
 
           .details {
-            font-size: 13px;
+            @include text-style(400, 16px, rgba(255, 255, 255, 0.6));
 
-            @media (max-width: 500px) {
+            @media (max-width: 600px) {
               margin-bottom: 10px;
               text-align: center;
             }
@@ -132,9 +126,8 @@
             .inside {
               width: 150px;
               @include button;
+              @include text-style(200, 18px, #fff);
               background-color: black;
-              font-size: 15px;
-              font-weight: 100;
               border: none;
               padding: 15px 20px;
             }
@@ -143,7 +136,7 @@
         .image {
           width: 50%;
 
-          @media (max-width: 500px) {
+          @media (max-width: 600px) {
             width: 100%;
           }
         }
