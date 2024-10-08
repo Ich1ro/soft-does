@@ -4,6 +4,7 @@ import Image from 'next/image';
 import vrImage from '@/public/techonology/vr-image.png';
 import headphones from '@/public/techonology/headphones.png';
 import hand from '@/public/techonology/hand-image.png';
+import Animation from '../Animations/Animations';
 
 interface ITechnologyProps {
   header?: string;
@@ -11,10 +12,12 @@ interface ITechnologyProps {
 
 export default function Technology({ header = '' }: ITechnologyProps) {
   return (
-    <div className={styles.main}>
-      <h1>{header}</h1>
-      <div className={styles.content}>
-        <div className={styles.big_block}>
+    <section className={styles.main}>
+      <Animation variant="slide-top">
+        <h1>{header}</h1>
+      </Animation>
+      <main className={styles.content}>
+        <article className={styles.big_block}>
           <Image
             quality={100}
             src={hand}
@@ -30,13 +33,13 @@ export default function Technology({ header = '' }: ITechnologyProps) {
               they’ve been able to staff an effective development team in no
               time and perform as expected.”
             </p>
-            <button className={styles.button}>
+            <button type="button" className={styles.button}>
               <div className={styles.inside}>Read more</div>
             </button>
           </div>
-        </div>
-        <div className={styles.block_wrapper}>
-          <div className={styles.small_block}>
+        </article>
+        <section className={styles.block_wrapper}>
+          <article className={styles.small_block}>
             <Image
               quality={100}
               src={vrImage}
@@ -52,12 +55,12 @@ export default function Technology({ header = '' }: ITechnologyProps) {
                 very start, they’ve been able to staff an effective development
                 team in no time and perform as expected.”
               </p>
-              <button className={styles.button}>
+              <button type="button" className={styles.button}>
                 <div className={styles.inside}>Read more</div>
               </button>
             </div>
-          </div>
-          <div className={styles.small_block}>
+          </article>
+          <article className={styles.small_block}>
             <Image
               quality={100}
               src={headphones}
@@ -73,13 +76,13 @@ export default function Technology({ header = '' }: ITechnologyProps) {
                 very start, they’ve been able to staff an effective development
                 team in no time and perform as expected.”
               </p>
-              <button className={styles.button}>
+              <button type="button" className={styles.button}>
                 <div className={styles.inside}>Read more</div>
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </article>
+        </section>
+      </main>
+    </section>
   );
 }
