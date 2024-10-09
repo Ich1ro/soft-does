@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './MainInsights.module.scss';
 
-export default function MainInsights() {
+export function MainInsights() {
   const scrollToContacts = () => {
     const element = document.getElementById('contacts');
 
@@ -13,15 +13,15 @@ export default function MainInsights() {
   };
 
   return (
-    <div className={styles.main} id="">
-      <div className={styles.main_content}>
+    <section className={styles.main} id="">
+      <main className={styles.main_content}>
         <h1>soft does insights</h1>
         <p>
           We transform market insights into globally beloved apps that power
           your business
         </p>
         <button onClick={scrollToContacts}>Contact Us</button>
-      </div>
-    </div>
+      </main>
+    </section>
   );
 }
