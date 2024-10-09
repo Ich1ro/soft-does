@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 5%;
+    padding: 0 5% 0 clamp(20px, 3%, 60px);
 
     @media (max-width: 800px) {
       align-items: center;
@@ -37,28 +37,33 @@
       margin-bottom: 20px;
 
       & p {
-        opacity: 0.5;
-        font-size: 13px;
+        @include text-style(400, 16px, rgba(255, 255, 255, 0.5));
         margin-bottom: 5px;
       }
 
       & a {
-        font-size: 35px;
+        text-wrap: wrap;
+        @include text-style(200, 54px, #fff);
         font-family: var(--font-jetbrains-mono);
         transition: color 0.5s ease-in-out;
 
         &:hover {
-          color: #e2ff66;
+          color: rgba(208, 236, 87, 1);
+        }
+
+        @media (max-width: 1650px) {
+          @include text-style(200, clamp(26px, 3vw, 54px), #fff);
         }
 
         @media (max-width: 500px) {
-          font-size: 25px;
+          font-size: 20px;
         }
       }
     }
   }
 
   &_left {
+    padding: 0 clamp(20px, 3%, 60px) 0 5%;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 
     @media (max-width: 800px) {

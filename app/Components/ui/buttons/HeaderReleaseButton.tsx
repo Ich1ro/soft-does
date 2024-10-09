@@ -9,8 +9,8 @@ export function HeaderReleaseButton() {
     >
       <mask id="path-1-inside-1_25_4202" fill="white">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M166.253 8C166.253 3.58172 162.671 0 158.253 0H8.25293C3.83465 0 0.25293 3.58172 0.25293 8V60C0.25293 64.4183 3.83465 68 8.25293 68H134.939C137.061 68 139.096 67.1571 140.596 65.6569L163.91 42.3431C165.41 40.8429 166.253 38.808 166.253 36.6863V8Z"
         />
       </mask>
