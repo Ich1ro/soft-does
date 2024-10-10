@@ -1,0 +1,134 @@
+@import '../../mixins.scss';
+
+.main {
+  padding: 0 5%;
+  width: 100%;
+  height: 100vh;
+  // margin-top: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: conic-gradient(
+    from -60.23deg at 74.71% 49.86%,
+    rgba(20, 63, 173, 0.1) -79.72deg,
+    rgba(22, 29, 37, 0.2) 43.82deg,
+    #143fad 280.19deg,
+    #161d25 280.21deg,
+    rgba(20, 63, 173, 0.5) 280.23deg,
+    #161d25 280.26deg,
+    rgba(20, 63, 173, 0.1) 280.28deg,
+    rgba(22, 29, 37, 0.2) 403.82deg
+  );
+
+  @media (max-width: 1025px) {
+    justify-content: center;
+  }
+
+  &_content {
+    width: 50%;
+
+    @media (max-width: 1025px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  h1 {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    @include text-style(300, 120px, #fff);
+    max-width: 100%;
+    text-transform: uppercase;
+
+    @media (max-width: 1460px) {
+      @include text-style(300, 80px, #fff);
+    }
+
+    @media (max-width: 1025px) {
+      margin-top: 4vh;
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      @include text-style(300, 3rem, #fff);
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      @include text-style(300, 2.5rem, #fff);
+    }
+
+    @media (max-width: 320px) {
+      text-align: center;
+      @include text-style(300, 1.8rem, #fff);
+      margin-top: 1vh;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    @include text-style(400, 18px, #ffffff99);
+    margin-bottom: 30px;
+    max-width: 50%;
+
+    @media (max-width: 1025px) {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      @include text-style(400, 12px, #ffffff99);
+    }
+
+    @media (max-width: 320px) {
+      max-width: 90%;
+    }
+  }
+
+  button {
+    border: none;
+    @include button;
+
+    width: 160px;
+    height: 60px;
+    color: black;
+
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0 100%
+    );
+
+    background: conic-gradient(
+        from 25.57deg at 12% 50%,
+        #e2ff66 0deg,
+        #8da720 360deg
+      ),
+      #ffffff;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+      padding: 10px 20px;
+      width: 130px;
+      height: 50px;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 12px;
+      padding: 10px 20px;
+      width: 120px;
+      height: 40px;
+      margin-left: calc(65vw - 120px);
+    }
+  }
+
+  .image {
+    width: 60%;
+    height: auto;
+  }
+}

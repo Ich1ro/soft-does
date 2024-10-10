@@ -3,6 +3,7 @@ import second from '../../../../public/elements/second.svg';
 import pin from '../../../../public/pins/green-pin.svg';
 import Animation from '../../Animations/Animations';
 import styles from './Consulting.module.scss';
+import Link from 'next/link';
 
 export default function Consulting() {
   return (
@@ -83,9 +84,11 @@ export default function Consulting() {
             variant="slide-right"
             // className={styles.main_left_list_wrapper}
           >
-            <button className={styles.main_left_wrapper_button}>
-              Read More
-            </button>
+            <Link href="/technologies">
+              <button className={styles.main_left_wrapper_button}>
+                Read More
+              </button>
+            </Link>
           </Animation>
         </div>
       </div>
