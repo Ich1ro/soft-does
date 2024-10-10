@@ -3,8 +3,8 @@ import styles from './ContactUsForm.module.scss';
 
 export function ContactUsForm() {
   return (
-    <div className={styles.main_bottom} id="contacts">
-      <div className={styles.main_bottom_left}>
+    <section className={styles.main_bottom} id="contacts">
+      <article className={styles.main_bottom_left}>
         <Animation
           delay={200}
           variant="slide-left"
@@ -57,8 +57,8 @@ export function ContactUsForm() {
             <button>Send Message</button>
           </form>
         </Animation>
-      </div>
-      <div className={styles.main_bottom_right}>
+      </article>
+      <article className={styles.main_bottom_right}>
         <Animation
           delay={200}
           variant="slide-right"
@@ -83,7 +83,7 @@ export function ContactUsForm() {
           <p>Phone number</p>
           <a href="">+ 1 213 4019311</a>
         </Animation>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 }

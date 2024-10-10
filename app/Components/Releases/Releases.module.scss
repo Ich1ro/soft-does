@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     padding: 20px 5%;
   }
 
@@ -24,34 +24,28 @@
     }
 
     h1 {
-      font-size: 54px;
-      font-weight: 300;
+      @include text-style(300, 54px, #fff);
 
       @media (max-width: 800px) {
-        font-size: 40px;
+        @include text-style(300, 40px, #fff);
       }
     }
 
-    .button {
-      width: 150px;
-      color: #fff;
-      @include button;
-      padding: 1px;
+    .header_button {
       border: none;
+      background-color: #ffffff00;
+      margin-top: auto;
+      position: relative;
+      cursor: pointer;
 
-      .inside {
-        width: 148px;
-        @include button;
-        background-color: black;
-        font-size: 18px;
-        font-weight: 100;
-        border: none;
-        padding: 18px 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
+      p {
+        @include text-style(200, 18px, #fff);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: var(--font-jetbrains-mono, monospace);
+        text-transform: uppercase;
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -59,17 +53,31 @@
   .content {
     display: flex;
     width: 100%;
-    gap: 25px;
 
     .block_wrapper {
       flex: 2;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
+      gap: 25px;
+
+      @media (max-width: 1666px) {
+        grid-template-columns: 1fr;
+
+        .left_align {
+          margin-right: auto;
+          margin-left: 0;
+        }
+
+        .right_align {
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+
       @media (max-width: 1024px) {
         grid-template-columns: 1fr;
       }
-      gap: 25px;
 
       .small_block {
         width: 100%;
@@ -79,7 +87,11 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         padding: 10px;
 
-        @media (max-width: 500px) {
+        @media (max-width: 1666px) {
+          max-width: 838px;
+        }
+
+        @media (max-width: 600px) {
           flex-direction: column;
         }
 
@@ -88,62 +100,62 @@
           flex-direction: column;
           flex-grow: 1;
           width: 45%;
+          gap: 32px;
 
-          @media (max-width: 500px) {
+          @media (max-width: 920px) {
+            gap: 10px;
+          }
+
+          @media (max-width: 600px) {
             width: 100%;
             align-items: center;
           }
 
           h5 {
-            font-size: 15px;
+            @include text-style(200, 20px, #fff);
             margin-bottom: 5px;
-            font-weight: 200;
             text-transform: uppercase;
           }
 
           .subtitle {
             text-transform: uppercase;
-            margin-bottom: 20px;
-            opacity: 0.5;
-            font-size: 15px;
+            @include text-style(200, 16px, rgba(255, 255, 255, 0.4));
             text-transform: uppercase;
-            margin-bottom: 20px;
-            opacity: 0.5;
           }
 
           .details {
-            font-size: 13px;
+            @include text-style(400, 16px, rgba(255, 255, 255, 0.6));
 
-            @media (max-width: 500px) {
+            @media (max-width: 600px) {
               margin-bottom: 10px;
               text-align: center;
             }
           }
 
           .button {
-            color: #fff;
-            width: 150px;
-            margin-top: auto;
-            @include button;
-            padding: 1px;
             border: none;
-            // box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 1);
+            background-color: #ffffff00;
+            width: 166px;
+            margin-top: auto;
+            position: relative;
+            cursor: pointer;
 
-            .inside {
-              width: 150px;
-              @include button;
-              background-color: black;
-              font-size: 15px;
-              font-weight: 100;
-              border: none;
-              padding: 15px 20px;
+            p {
+              @include text-style(200, 18px, #fff);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 70%;
+              font-family: var(--font-jetbrains-mono, monospace);
+              text-transform: uppercase;
+              transform: translate(-50%, -50%);
             }
           }
         }
         .image {
           width: 50%;
 
-          @media (max-width: 500px) {
+          @media (max-width: 600px) {
             width: 100%;
           }
         }
