@@ -9,18 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //   justify-content: center;
-  //   background: conic-gradient(
-  //     from 270deg at 50% 50%,
-  //     rgba(207, 236, 87, 0.1) -79.72deg,
-  //     rgba(22, 29, 37, 0.2) 43.82deg,
-  //     #cfec57 280.19deg,
-  //     #161d25 280.21deg,
-  //     rgba(207, 236, 87, 0.5) 280.23deg,
-  //     #161d25 280.26deg,
-  //     rgba(207, 236, 87, 0.1) 280.28deg,
-  //     rgba(22, 29, 37, 0.2) 403.82deg
-  //   );
 
   background: conic-gradient(
     from 270deg at 50% 50%,
@@ -51,37 +39,39 @@
   h1 {
     margin-top: 100px;
     margin-bottom: 30px;
-    font-size: 5rem;
+    @include text-style(300, 120px, #fff);
     max-width: 100%;
-    font-weight: 200;
     text-transform: uppercase;
+
+    @media (max-width: 1460px) {
+      @include text-style(300, 80px, #fff);
+    }
 
     @media (max-width: 1025px) {
       margin-top: 4vh;
       max-width: 100%;
       width: 100%;
       text-align: center;
-      font-size: 3rem;
+      @include text-style(300, 3rem, #fff);
     }
 
     @media (max-width: 768px) {
       text-align: center;
-      font-size: 2.5rem;
+      @include text-style(300, 2.5rem, #fff);
     }
 
     @media (max-width: 320px) {
       text-align: center;
-      font-size: 1.8rem;
+      @include text-style(300, 1.8rem, #fff);
       margin-top: 1vh;
       margin-bottom: 15px;
     }
   }
 
   p {
+    @include text-style(400, 18px, #ffffff99);
     margin-bottom: 30px;
     max-width: 50%;
-    font-size: 16px;
-    font-weight: 200;
 
     @media (max-width: 1025px) {
       max-width: 100%;
@@ -90,11 +80,10 @@
     }
 
     @media (max-width: 768px) {
-      font-size: 12px;
+      @include text-style(400, 12px, #ffffff99);
     }
 
     @media (max-width: 320px) {
-      font-size: 12px;
       max-width: 90%;
     }
   }
