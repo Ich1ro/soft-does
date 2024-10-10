@@ -3,6 +3,7 @@ import third from '../../../../public/elements/third.svg';
 import pin from '../../../../public/pins/blue-pin.svg';
 import Animation from '../../Animations/Animations';
 import styles from './TeamAugmentation.module.scss';
+import Link from 'next/link';
 
 export default function TeamAugmentation() {
   return (
@@ -73,9 +74,11 @@ export default function TeamAugmentation() {
             variant="slide-left"
             // className={styles.main_left_list_wrapper}
           >
-            <button className={styles.main_left_wrapper_button}>
-              Read More
-            </button>
+            <Link href="/technologies">
+              <button className={styles.main_left_wrapper_button}>
+                Read More
+              </button>
+            </Link>
           </Animation>
         </div>
       </div>
