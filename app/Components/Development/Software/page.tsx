@@ -3,6 +3,7 @@ import first from '../../../../public/elements/first.svg';
 import pin from '../../../../public/pins/purple-pin.svg';
 import Animation from '../../Animations/Animations';
 import styles from './Software.module.scss';
+import Link from 'next/link';
 
 export default function Software() {
   return (
@@ -83,9 +84,11 @@ export default function Software() {
             variant="slide-left"
             // className={styles.main_left_list_wrapper}
           >
-            <button className={styles.main_left_wrapper_button}>
-              Read More
-            </button>
+            <Link href="/technologies">
+              <button className={styles.main_left_wrapper_button}>
+                Read More
+              </button>
+            </Link>
           </Animation>
         </div>
       </div>

@@ -51,3 +51,15 @@ export const releaseImages1 = [
   robotImage,
   laptopImage,
 ];
+
+export const technologiesList = [
+  'iOS App Development',
+  'Android App Development',
+  'Cross-Platform App Development',
+  'iOS App Development',
+  'Android App Development',
+  'Cross-Platform App Development',
+  'iOS App Development',
+  'Android App Development',
+  'Cross-Platform App Development',
+];

@@ -3,6 +3,7 @@ import fourth from '../../../../public/elements/fourth.svg';
 import pin from '../../../../public/pins/pink-pin.svg';
 import Animation from '../../Animations/Animations';
 import styles from './DigitalAdvisory.module.scss';
+import Link from 'next/link';
 
 export default function DigitalAdvisory() {
   return (
@@ -73,9 +74,11 @@ export default function DigitalAdvisory() {
             variant="slide-right"
             // className={styles.main_left_list_wrapper}
           >
-            <button className={styles.main_left_wrapper_button}>
-              Read More
-            </button>
+            <Link href="/technologies">
+              <button className={styles.main_left_wrapper_button}>
+                Read More
+              </button>
+            </Link>
           </Animation>
         </div>
       </div>
