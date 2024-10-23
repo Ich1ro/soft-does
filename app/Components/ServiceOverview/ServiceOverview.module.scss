@@ -1,0 +1,109 @@
+@import '../../mixins';
+
+.service_overview {
+  display: flex;
+  flex-direction: column;
+  padding: 8.5% 5%;
+  justify-content: center;
+  gap: 50px;
+
+  .service_card {
+    height: 426px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #ffffff0a;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 690px) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .card_two {
+      padding: clamp(10px, 4%, 83px) clamp(10px, 2%, 50px) clamp(10px, 5%, 83px)
+        clamp(10px, 5%, 83px);
+
+      @media (max-width: 690px) {
+        padding: 20px 10px 20px 10px;
+      }
+    }
+
+    div {
+      padding: clamp(10px, 4%, 83px) clamp(10px, 4%, 83px) clamp(10px, 4%, 83px)
+        clamp(10px, 2%, 50px);
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      @media (max-width: 1080px) {
+        width: 50%;
+
+        @media (max-width: 690px) {
+          width: 100%;
+          padding: 20px 10px 20px 10px;
+        }
+      }
+
+      h2 {
+        text-transform: uppercase;
+        line-height: 59.4px;
+        @include text-style(200, 54px, #e9e9e9);
+
+        &::before,
+        &::after {
+          content: '>';
+          @include text-style(200, 54px, #f28b82);
+
+          @media (max-width: 430px) {
+            @include text-style(200, 20px, #f28b82);
+          }
+        }
+
+        &::before {
+          margin-right: 10px;
+        }
+
+        &::after {
+          content: '<';
+          margin-left: 10px;
+        }
+
+        @media (max-width: 1720px) {
+          line-height: 43.4px;
+          @include text-style(200, 38px, #e9e9e9);
+
+          @media (max-width: 430px) {
+            line-height: 23.4px;
+            @include text-style(200, 20px, #e9e9e9);
+          }
+        }
+      }
+    }
+
+    p {
+      width: 64%;
+      @include text-style(400, 16px, #ffffff99);
+
+      @media (max-width: 1080px) {
+        width: 100%;
+      }
+    }
+  }
+
+  img {
+    width: 55%;
+    object-fit: cover;
+
+    @media (max-width: 1080px) {
+      width: 50%;
+
+      @media (max-width: 690px) {
+        width: 100%;
+        height: 50%;
+      }
+    }
+  }
+}
