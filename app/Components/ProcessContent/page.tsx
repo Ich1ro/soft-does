@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Animation from '../Animations/Animations';
-import { ProcessCardGroup } from './ProcessCardGroup/page';
+import ProcessCardGroup from './ProcessCardGroup/page';
 
 export default function ProcessContent() {
   return (

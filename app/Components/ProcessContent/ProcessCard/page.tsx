@@ -1,6 +1,7 @@
+import React from 'react'
 import s from './styles.module.scss';
 
-export const ProcessCard: React.FC = () => {
+export default function ProcessCard() {
   return (
     <article className={s.processCard}>
       <header>
@@ -16,5 +17,6 @@ export const ProcessCard: React.FC = () => {
         as expected.”
       </p>
     </article>
-  );
-};
+  )
+}
+
