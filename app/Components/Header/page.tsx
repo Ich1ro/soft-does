@@ -33,7 +33,7 @@ export default function Header() {
       >
         <Link href="/services">Services</Link>
         <Link href="/expertise">Expertise</Link>
-        <a href="#insights">Industies</a>
+        <Link href="/industries">Industies</Link>
         <a href="#videos">Success Stories</a>
         <a href="#insights">Solution Hub</a>
         <a href="#about">Company</a>

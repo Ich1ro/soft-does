@@ -6,6 +6,24 @@
   display: flex;
   flex-direction: column;
 
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include text-style(300, 80px, #fff);
+
+    @media (max-width: 1500px) {
+      @include text-style(300, 80px, #fff);
+    }
+
+    @media (max-width: 1000px) {
+      @include text-style(300, 60px, #fff);
+    }
+
+    @media (max-width: 600px) {
+      @include text-style(300, 40px, #fff);
+    }
+  }
+
   @media (max-width: 600px) {
     padding: 20px 5%;
   }

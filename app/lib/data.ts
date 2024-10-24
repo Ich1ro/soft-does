@@ -63,3 +63,9 @@ export const technologiesList = [
   'Android App Development',
   'Cross-Platform App Development',
 ];
+
+export const benefitsList = [
+  'Optimize your product delivery terms',
+  'Optimize your product delivery terms',
+  'Optimize your product delivery terms',
+];

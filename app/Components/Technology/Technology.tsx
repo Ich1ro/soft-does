@@ -14,7 +14,7 @@ export default function Technology({ header = '' }: ITechnologyProps) {
   return (
     <section className={styles.main}>
       <Animation variant="slide-top">
-        <h1>{header}</h1>
+        <h1 className={styles.title}>{header}</h1>
       </Animation>
       <main className={styles.content}>
         <article className={styles.big_block}>

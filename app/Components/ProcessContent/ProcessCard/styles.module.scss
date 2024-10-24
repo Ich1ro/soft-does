@@ -1,0 +1,74 @@
+.processCard {
+    width: clamp(300px, 35vw, 649px);
+    padding: 30px 0 45px 30px;
+    background: #ffffff0a;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid #ffffff66;
+    gap: 32px;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+
+        div {
+            width: 70px;
+            height: 70px;
+            background: #173b9133;
+            border: 1px solid #173b9173;
+        }
+
+        h3 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 200;
+            line-height: 35.2px;
+            letter-spacing: -0.08em;
+            text-align: left;
+
+            span {
+                color: #173b91;
+            }
+        }
+    }
+
+    p {
+        font-family: "Suisse Intl", sans-serif;
+        font-size: 16px;
+        width: 361px;
+        height: 110px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+        color: #ffffff99;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .processCard {
+        width: clamp(358px, 34vw, 440px);
+        padding: 30px 30px 45px 30px;
+
+        p {
+            font-size: 12px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .processCard {
+        min-width: 288px;
+        padding: 20px 10px 30px 10px;
+
+        header {
+            gap: 26px;
+
+            h3 {
+                font-size: 26px;
+                line-height: 29.2px;
+            }
+        }
+    }
+}

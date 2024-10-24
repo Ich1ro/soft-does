@@ -1,0 +1,87 @@
+@import '../../mixins';
+
+.technologies_list {
+  display: flex;
+  flex-direction: column;
+  padding: 140px 5% 0 5%;
+  gap: 80px;
+
+  h1 {
+    text-transform: uppercase;
+    @include text-style(300, 80px, #fff);
+
+    @media (max-width: 1500px) {
+      @include text-style(300, 80px, #fff);
+    }
+
+    @media (max-width: 1000px) {
+      @include text-style(300, 60px, #fff);
+    }
+
+    @media (max-width: 600px) {
+      @include text-style(300, 40px, #fff);
+    }
+  }
+
+  .card_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 1240px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 760px) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 30px;
+      background-color: #ffffff0a;
+      border: 1px solid #ffffff29;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      h3 {
+        width: 80%;
+        text-transform: uppercase;
+        @include text-style(200, 32px, #e9e9e9);
+
+        @media (max-width: 1610px) {
+          width: 100%;
+        }
+
+        &::before,
+        &::after {
+          content: '>';
+        }
+
+        &::before {
+          margin-right: 10px;
+        }
+
+        &::after {
+          content: '<';
+          margin-left: 10px;
+        }
+      }
+
+      p {
+        width: 80%;
+        @include text-style(400, 16px, #ffffff99);
+
+        @media (max-width: 1610px) {
+          width: 100%;
+        }
+      }
+
+      div {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #ffffff73;
+      }
+    }
+  }
+}

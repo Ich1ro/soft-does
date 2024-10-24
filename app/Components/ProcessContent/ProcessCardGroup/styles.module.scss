@@ -1,0 +1,11 @@
+.processCardGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 124px;
+}
+
+@media (max-width: 1024px) {
+    .processCardGroup {
+        gap: 20px;
+    }
+}
