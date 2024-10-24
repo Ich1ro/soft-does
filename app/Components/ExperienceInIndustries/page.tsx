@@ -2,7 +2,7 @@ import { technologiesList } from '@/app/lib/data';
 import styles from './styles.module.scss';
 import Animation from '../Animations/Animations';
 
-export function ExperienceInIndustries() {
+export default function ExperienceInIndustries() {
   return (
     <section className={styles.technologies_list}>
       <h1>We have experience in these industries</h1>
