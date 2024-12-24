@@ -3,6 +3,8 @@ import styles from './Main.module.scss';
 import Spline from '@splinetool/react-spline/next';
 // import dynamic from 'next/dynamic';
 import { useRef, useState } from 'react';
+import kansasIcon from '../../../public/kansas-flag-min.jpg';
+import Image from 'next/image';
 
 // const Spline = dynamic(() => import('@splinetool/react-spline/next'), {
 //   loading: () => <p></p>,
@@ -28,7 +30,7 @@ export default function Main() {
 
   const scrollToContacts = () => {
     const element = document.getElementById('contacts');
-    
+
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -45,12 +47,19 @@ export default function Main() {
         className={styles.main_image}
       />
       <div className={styles.main_content}>
-        <h1>Innovacion amigable en software</h1>
-        <p>
-          We transform market insights into globally beloved apps that power
-          your business
-        </p>
-        <button onClick={scrollToContacts}>Contact Us</button>
+        <div className={styles.main_description_wrapper}>
+          <span className={styles.main_description_text}>
+            proudly based in kansas
+          </span>
+          <Image
+            alt=""
+            src={kansasIcon.src}
+            width={kansasIcon.width}
+            height={kansasIcon.height}
+          />
+        </div>
+        <h1>Partner in Innovative Software Development</h1>
+        <button onClick={scrollToContacts}>Talk to Us</button>
       </div>
     </div>
   );
