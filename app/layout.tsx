@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { inter, jetbrainsMono } from './lib/fonts';
 import './globals.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`dark ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
